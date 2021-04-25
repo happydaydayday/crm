@@ -1,6 +1,19 @@
 package com.bjpowernode.crm.settings.damain;
 
 public class User {
+    /**
+     * 登陆  验证账号和密码
+     * User user = 执行sql语句select * from tbl_user where LoginAct=?andLoginpwd=?
+     * user对象为null，说明账号密码错误
+     * 如果user对象不为null，说明账号密码正确
+     * 需要向下验证其他的字段信息
+     *
+     * 从user中get到
+     *
+     *  erpireTime 验证失效时间
+     *  lockState  验证锁定状态
+     *  allowIps   验证浏览器端的IP地址是否有效
+     */
     private String id;  //编号 主键
     private String loginAct;  // 登陆账号
     private String name;  // 用户真实姓名
